@@ -42,8 +42,8 @@ val DoNetPEDll.getPeImageSize: Int
     get() {
         val peImageSizeIndex = this.peImageSizeIndexOffset
         val peImageSizeByte =
-            memDump.copyOfRange(peImageSizeIndex, peImageSizeIndex + 4)
-        return (peImageSizeByte[3] * 256 * 256 * 256 + peImageSizeByte[2] * 256 * 256 + peImageSizeByte[1] * 256 + peImageSizeByte[0]).toInt()
+            memDump.copyOfRange(peImageSizeIndex, peImageSizeIndex + 4).map { it.toUByte() }
+        return (peImageSizeByte[3] * 256u * 256u * 256u + peImageSizeByte[2] * 256u * 256u + peImageSizeByte[1] * 256u + peImageSizeByte[0]).toInt()
     }
 
 val DoNetPEDll.peImageEnd: Int
