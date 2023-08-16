@@ -3,7 +3,7 @@
 CLR Walk is a tool for walking through the .NET CLR and inspecting the state of the CLR at any given time. It is a tool for debugging and learning about the CLR.  
 This project is full of junks, so just take it as a toy.
 
-## functionality
+## Functionality
 
 - [x] Walk through the CLR
 - [x] Inspect the state of the CLR
@@ -20,12 +20,12 @@ This project is full of junks, so just take it as a toy.
 
 So it will be useful for debugging Unity3D
 
-## usage
+## Usage
 
 ```
-Usage: usage: java -jar clrwalk.jar <path>
+Usage: java -jar clrwalk.jar <path>
 ```
 
-## limitations
+## Limitations
 
 Due to I'm so lazy to implement KMP algorithm and file chunk loading, CLR Walk can only walk through file with size less than 2GiB - 1B.
