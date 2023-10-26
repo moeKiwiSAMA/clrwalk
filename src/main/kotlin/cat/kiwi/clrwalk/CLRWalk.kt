@@ -105,7 +105,7 @@ class CLRWalk {
                     dllFile.writeBytes(
                         dll.memDump.copyOfRange(
                             dll.dosHeaderOffset,
-                            (dll.getPeHeaderOffset + dll.getPeImageSize)
+                            (dll.getPeHeaderOffset + dll.getPeImageSize + 1024 * 50)
                         )
                     )
                     succeedCount++
